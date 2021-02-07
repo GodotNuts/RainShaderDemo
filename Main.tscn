@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://WeirdLight.png" type="Texture" id=1]
+[ext_resource path="res://Windshield.tscn" type="PackedScene" id=3]
+[ext_resource path="res://FlickeringLight.gd" type="Script" id=4]
+
+[node name="Main" type="Node2D"]
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 453.7, 330.636 )
+scale = Vector2( 1.76505, 1.28433 )
+texture = ExtResource( 1 )
+energy = 0.0
+script = ExtResource( 4 )
+MaxEnergy = 0.5
+FlashCount = 10.0
+TimeBetweenFlashes = 8
+
+[node name="Tween" type="Tween" parent="Light2D"]
+
+[node name="Windshield" parent="." instance=ExtResource( 3 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 509.878, 299.176 )
+current = true

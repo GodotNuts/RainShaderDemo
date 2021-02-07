@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Rain.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/DropletSize = 0.7
+shader_param/DropletVisibility = 0.0001
+shader_param/RainSpeed = 0.75
+shader_param/WiggleAmount = 0.5
+shader_param/Streakiness = 10.0

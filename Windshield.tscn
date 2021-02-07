@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://windshield.png" type="Texture" id=1]
+[ext_resource path="res://windshield_mask.png" type="Texture" id=3]
+[ext_resource path="res://RainMaterial.tres" type="Material" id=4]
+
+[node name="Windshield" type="Node2D"]
+show_behind_parent = true
+
+[node name="Glass" type="Sprite" parent="."]
+position = Vector2( 16, 17.3697 )
+scale = Vector2( 0.484238, 0.642095 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Rain" type="TextureRect" parent="."]
+material = ExtResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1770.0
+margin_bottom = 936.0
+rect_scale = Vector2( 0.5, 0.665 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
